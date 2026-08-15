@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/works"
+public_folder: "/images/works"
+
+locale: "ko"
+
+collections:
+  - name: "works"
+    label: "포트폴리오"
+    files:
+      - file: "content/works.json"
+        label: "작업물 목록"
+        name: "works"
+        fields:
+          - label: "작업물"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} ({{category}})"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - label: "카테고리"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "브랜딩", value: "branding" }
+                  - { label: "상세페이지", value: "detail" }
+                  - { label: "컨텐츠디자인", value: "content" }
+                  - { label: "로고디자인", value: "logo" }
+                  - { label: "패키지", value: "package" }
+              - { label: "대표 이미지 (카드 썸네일)", name: "image", widget: "image", required: false }
+              - { label: "클라이언트/브랜드명", name: "client", widget: "string", required: false }
+              - { label: "연도", name: "year", widget: "string", required: false }
+              - { label: "상세 설명", name: "description", widget: "text", required: false }
+              - label: "추가 이미지 (상세보기 갤러리)"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "이미지", name: "src", widget: "image" }
