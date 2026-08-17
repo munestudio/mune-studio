@@ -121,21 +121,10 @@
   .detail-section{padding:150px 0 120px;}
   .detail-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--gray-600);margin-bottom:34px;}
   .detail-back:hover{color:var(--orange);}
-  .detail-hero{width:100%;border-radius:24px;overflow:hidden;background:var(--gray-100);}
-  .detail-hero img{width:100%;display:block;}
-  .detail-head{max-width:760px;margin:44px 0 0;}
+  .detail-head{max-width:820px;margin:0 auto 48px;text-align:center;}
   .detail-cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);}
-  .detail-head h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.28;margin:12px 0 0;}
-  .detail-meta{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);}
-  .detail-meta-item{padding:20px 32px 20px 0;margin-right:32px;}
-  .detail-meta-item:first-child{padding-left:0;}
-  .detail-meta-item b{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;}
-  .detail-meta-item span{font-size:15px;font-weight:700;color:var(--gray-900);}
-  .detail-desc{max-width:760px;margin-top:36px;font-size:16.5px;line-height:1.9;color:var(--gray-900);white-space:pre-line;}
-  .detail-divider{margin:64px 0;border-radius:20px;background:linear-gradient(120deg,var(--orange),var(--orange-dark));padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff;flex-wrap:wrap;}
-  .detail-divider .mark{font-size:20px;font-weight:800;letter-spacing:-.01em;}
-  .detail-divider .word{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.85;}
-  .detail-gallery{display:flex;flex-direction:column;gap:6px;border-radius:20px;overflow:hidden;}
+  .detail-head h1{font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.4;margin:12px 0 0;}
+  .detail-gallery{display:flex;flex-direction:column;gap:0;}
   .detail-gallery img{width:100%;display:block;}
   .detail-cta{margin-top:70px;text-align:center;padding:64px 32px;background:var(--paper);border-radius:28px;}
   .detail-cta h2{font-size:clamp(22px,3vw,30px);font-weight:800;margin:0 0 12px;letter-spacing:-.02em;}
@@ -195,9 +184,6 @@
     .burger{display:block;}
     .wrap{padding:0 20px;}
     .detail-section{padding:120px 0 80px;}
-    .detail-hero{border-radius:16px;}
-    .detail-meta-item{padding-right:22px;margin-right:22px;}
-    .detail-divider{padding:26px 24px;}
     .detail-cta{padding:44px 22px;}
   }
 </style>
@@ -378,28 +364,19 @@
 
     const catKey = item.category || 'branding';
     const catLabel = CAT_LABEL[catKey] || catKey;
-    const hasImage = !!(item.image && String(item.image).trim());
-    const galleryItems = (Array.isArray(item.gallery)
+    const restGallery = (Array.isArray(item.gallery)
       ? item.gallery.map((g) => (typeof g === 'string' ? g : g && g.src)).filter(Boolean)
       : []).filter((src) => src !== item.image);
-
-    const metaHtml = [
-      item.client ? `<div class="detail-meta-item"><b>Client</b><span>${escapeHtml(item.client)}</span></div>` : '',
-      item.year ? `<div class="detail-meta-item"><b>Year</b><span>${escapeHtml(item.year)}</span></div>` : '',
-      `<div class="detail-meta-item"><b>Category</b><span>${escapeHtml(catLabel)}</span></div>`,
-    ].join('');
+    // 대표 이미지 + 갤러리를 하나로 이어서, 실제 상세페이지처럼 위에서 아래로 쭉 이어지게 보여줍니다.
+    const stackItems = [item.image, ...restGallery].filter(Boolean);
 
     wrapEl.innerHTML =
       `<a class="detail-back" href="works.html">← 포트폴리오</a>` +
-      (hasImage ? `<div class="detail-hero"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title || '')}"></div>` : '') +
       `<div class="detail-head">` +
         `<span class="detail-cat">${escapeHtml(catLabel)}</span>` +
         `<h1>${escapeHtml(item.title || '')}</h1>` +
       `</div>` +
-      `<div class="detail-meta">${metaHtml}</div>` +
-      (item.description ? `<p class="detail-desc">${escapeHtml(item.description)}</p>` : '') +
-      (galleryItems.length ? `<div class="detail-divider"><span class="mark">MUNE.STUDIO</span><span class="word">Project Gallery</span></div>` : '') +
-      (galleryItems.length ? `<div class="detail-gallery">${galleryItems.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.title || '')}" loading="lazy">`).join('')}</div>` : '') +
+      (stackItems.length ? `<div class="detail-gallery">${stackItems.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.title || '')}" loading="lazy">`).join('')}</div>` : '') +
       `<div class="detail-cta">` +
         `<h2>더 많은 작업물이 궁금하다면?</h2>` +
         `<p>MUNE STUDIO의 다른 프로젝트도 함께 확인해보세요.</p>` +
