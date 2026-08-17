@@ -21,6 +21,7 @@ collections:
             summary: "{{title}} ({{category}})"
             fields:
               - { label: "제목", name: "title", widget: "string" }
+              - { label: "URL 슬러그 (영문/숫자, 상세페이지 주소로 사용)", name: "slug", widget: "string", required: false, hint: "예: mandu, propolis — 비워두면 자동으로 번호가 부여돼요" }
               - label: "카테고리"
                 name: "category"
                 widget: "select"
@@ -30,6 +31,7 @@ collections:
                   - { label: "컨텐츠디자인", value: "content" }
                   - { label: "로고디자인", value: "logo" }
                   - { label: "패키지", value: "package" }
+                  - { label: "AI 연출컷", value: "ai_cut" }
               - { label: "대표 이미지 (카드 썸네일)", name: "image", widget: "image", required: false }
               - { label: "클라이언트/브랜드명", name: "client", widget: "string", required: false }
               - { label: "연도", name: "year", widget: "string", required: false }

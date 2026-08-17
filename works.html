@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUNE STUDIO | 브랜드를 위한 디자인 스튜디오</title>
-<meta name="description" content="MUNE STUDIO는 브랜딩, 상세페이지, 컨텐츠디자인, 로고디자인, 패키지 디자인을 아우르는 디자인 스튜디오입니다.">
-<link rel="canonical" href="https://munestudio.kr/">
-<meta property="og:title" content="MUNE STUDIO | 브랜드를 위한 디자인 스튜디오">
-<meta property="og:description" content="브랜딩, 상세페이지, 컨텐츠디자인, 로고디자인, 패키지 디자인을 아우르는 디자인 스튜디오 MUNE STUDIO입니다.">
-<meta property="og:url" content="https://munestudio.kr/">
+<title>포트폴리오 | MUNE STUDIO</title>
+<meta name="description" content="MUNE STUDIO의 포트폴리오 전체 보기 — 브랜딩, 상세페이지, 컨텐츠디자인, 로고디자인, 패키지, AI 연출컷 프로젝트를 모두 확인하세요.">
+<link rel="canonical" href="https://munestudio.kr/works.html">
+<meta property="og:title" content="포트폴리오 | MUNE STUDIO">
+<meta property="og:description" content="MUNE STUDIO의 포트폴리오 전체 보기 — 진행한 프로젝트를 모두 확인하세요.">
+<meta property="og:url" content="https://munestudio.kr/works.html">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -188,8 +188,12 @@
     font-family:var(--font-kr);font-weight:700;font-size:19px;letter-spacing:.22em;
     color:var(--gray-600);pointer-events:none;
   }
+  .hero-cta-bar{
+    display:flex;gap:12px;flex-wrap:wrap;justify-content:center;padding:34px 32px 0;
+  }
   @media (max-width:720px){
     .hero-film-section{padding-top:64px;}
+    .hero-cta-bar{padding-top:24px;}
   }
 
   /* ---------- marquee ---------- */
@@ -201,7 +205,7 @@
   /* ---------- section generic ---------- */
   section{padding:120px 0;}
   .section-head{max-width:640px;margin-bottom:60px;}
-  .section-head h2{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.3;margin:0 0 18px;}
+  .section-head h2,.section-head h1{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.3;margin:0 0 18px;}
   .section-head p{font-size:16px;color:var(--gray-600);line-height:1.75;margin:0;}
   .fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
   .fade-up.in{opacity:1;transform:translateY(0);}
@@ -408,6 +412,7 @@
     .hero-accent .ha-core{inset:34px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .services-grid{grid-template-columns:repeat(2,1fr);}
+    .works-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .contact-visual{padding:44px 32px;}
     .contact-form{padding:44px 32px;}
@@ -446,202 +451,36 @@
 
 <header id="siteHeader">
   <div class="nav">
-    <a href="#top" class="logo">MUNE<span>.</span>STUDIO</a>
+    <a href="index.html" class="logo">MUNE<span>.</span>STUDIO</a>
     <nav class="nav-links">
-      <a href="#about">소개</a>
-      <a href="#services">서비스</a>
-      <a href="#works">포트폴리오</a>
-      <a href="#contact">문의</a>
+      <a href="index.html#about">소개</a>
+      <a href="index.html#services">서비스</a>
+      <a href="works.html">포트폴리오</a>
+      <a href="index.html#contact">문의</a>
     </nav>
     <div class="nav-right">
-      <a href="#contact" class="btn btn-primary magnetic">프로젝트 문의</a>
+      <a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의</a>
       <button class="burger" id="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about">소개</a>
-  <a href="#services">서비스</a>
-  <a href="#works">포트폴리오</a>
-  <a href="#contact">문의</a>
-  <a href="#contact" class="btn btn-primary">프로젝트 문의</a>
+  <a href="index.html#about">소개</a>
+  <a href="index.html#services">서비스</a>
+  <a href="works.html">포트폴리오</a>
+  <a href="index.html#contact">문의</a>
+  <a href="index.html#contact" class="btn btn-primary">프로젝트 문의</a>
 </div>
-
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero-film-section">
-    <div class="hero-film-wrap" id="heroFilmWrap">
-      <div class="hero-film-stage" id="filmStage">
-        <div class="hf-disc" id="hfDisc"></div>
-
-        <div class="hf-block hf-headline" id="hfHeadlineBlock">
-          <div class="hf-eyebrow" id="hfEyebrow">DESIGN STUDIO</div>
-          <div class="hf-heading">
-            <div class="hf-line" id="hfLine1"></div>
-            <div class="hf-line" id="hfLine2"></div>
-          </div>
-          <div class="hf-body" id="hfBody">MUNE STUDIO는 브랜딩, 상세페이지, 콘텐츠 디자인, 로고, 패키지 디자인을 아우르며<br>작은 브랜드가 가진 고유한 매력을 명확한 비주얼 언어로 풀어냅니다.</div>
-        </div>
-
-        <div class="hf-tagline" id="hfTagline">Branding &amp; Graphic Design Studio<br>for brands that want to be remembered.</div>
-
-        <div class="hf-block hf-work" id="hfWorkBlock">
-          <div class="hf-eyebrow" id="hfWorkEyebrow">WHAT WE DO</div>
-          <div class="hf-chips" id="hfChips"></div>
-        </div>
-
-        <div class="hf-block hf-statement" id="hfStatementBlock">
-          <div class="hf-stmt-lines">
-            <div class="hf-rise" id="hfRise1">작은 브랜드의 고유한 매력을</div>
-            <div class="hf-rise" id="hfRise2"><span class="hf-accent-text">명확한 비주얼</span> 언어로.</div>
-          </div>
-          <a href="works.html" class="hf-cta" id="hfCta">포트폴리오 보기 <span>&rarr;</span></a>
-        </div>
-
-        <div class="hf-close" id="hfCloseBlock">
-          <div class="hf-close-word">MUNE STUDIO</div>
-          <div class="hf-close-sub">MUNESTUDIO.KR</div>
-        </div>
-
-        <div class="hf-caption" id="hfCaption">BRANDING &amp; GRAPHIC DESIGN STUDIO — SEOUL</div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <span>BRANDING</span><span>DETAIL PAGE</span><span>CONTENT DESIGN</span><span>LOGO DESIGN</span><span>PACKAGE</span><span>AI CUT</span><span>IDENTITY</span>
-      <span>BRANDING</span><span>DETAIL PAGE</span><span>CONTENT DESIGN</span><span>LOGO DESIGN</span><span>PACKAGE</span><span>AI CUT</span><span>IDENTITY</span>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="fade-up">
-          <span class="eyebrow">About Us</span>
-          <p class="about-lead">우리는 <strong>당신의 브랜드가 가진 이야기</strong>를 가장 명확하고 아름다운 방식으로 전달하는 것을 목표로 합니다.</p>
-        </div>
-        <div class="fade-up">
-          <div class="value-list">
-            <div class="value-item">
-              <span class="value-num">01</span>
-              <div>
-                <h3>브랜드 중심의 리서치</h3>
-                <p>정형화된 템플릿이 아닌, 브랜드의 배경과 시장, 고객을 먼저 이해하는 과정에서 디자인을 시작합니다.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <span class="value-num">02</span>
-              <div>
-                <h3>일관된 비주얼 시스템</h3>
-                <p>로고부터 상세페이지, 패키지, 콘텐츠까지 하나의 톤앤매너로 이어지는 디자인 시스템을 구축합니다.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <span class="value-num">03</span>
-              <div>
-                <h3>실행 가능한 결과물</h3>
-                <p>보기 좋은 디자인을 넘어, 실제 비즈니스에 바로 적용할 수 있는 결과물을 지향합니다.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="wrap">
-      <div class="stats-grid">
-        <div class="stat-item fade-up">
-          <h3 data-count="1200" data-suffix="+">0</h3>
-          <p>완료 프로젝트</p>
-        </div>
-        <div class="stat-item fade-up">
-          <h3 data-count="99" data-suffix="+">0</h3>
-          <p>협업 브랜드</p>
-        </div>
-        <div class="stat-item fade-up">
-          <h3 data-count="98" data-suffix="%">0</h3>
-          <p>클라이언트 만족도</p>
-        </div>
-        <div class="stat-item fade-up">
-          <h3 data-count="10" data-suffix="년차">0</h3>
-          <p>대표 디자인 경력</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="section-head fade-up">
-        <span class="eyebrow">Services</span>
-        <h2>스튜디오가 제공하는 디자인 영역</h2>
-        <p>브랜드의 시작부터 확장까지, 필요한 만큼의 디자인을 함께합니다.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <span class="service-num">01</span>
-          <div>
-            <h3>브랜딩</h3>
-            <p>로고, 컬러, 타이포그래피 등 브랜드 아이덴티티 전반을 설계합니다.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <span class="service-num">02</span>
-          <div>
-            <h3>상세페이지</h3>
-            <p>구매 전환을 높이는 제품/서비스 상세페이지를 기획하고 디자인합니다.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <span class="service-num">03</span>
-          <div>
-            <h3>컨텐츠디자인</h3>
-            <p>SNS, 배너 등 브랜드 톤을 담은 콘텐츠를 지속적으로 제작합니다.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <span class="service-num">04</span>
-          <div>
-            <h3>로고디자인</h3>
-            <p>브랜드를 가장 압축적으로 보여주는 로고와 워드마크를 디자인합니다.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <span class="service-num">05</span>
-          <div>
-            <h3>패키지</h3>
-            <p>제품이 매대에서 돋보일 수 있는 패키지와 라벨을 디자인합니다.</p>
-          </div>
-        </div>
-        <div class="service-card fade-up">
-          <span class="service-num">06</span>
-          <div>
-            <h3>AI 연출컷</h3>
-            <p>AI 툴을 활용해 촬영 없이도 완성도 높은 제품 연출컷을 제작합니다.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKS -->
-  <section class="works" id="works">
+  <!-- WORKS (full portfolio page) -->
+  <section id="works">
     <div class="wrap">
       <div class="section-head fade-up">
         <span class="eyebrow">Works</span>
-        <h2>MUNE STUDIO의 포트폴리오</h2>
-        <p>각 작업물을 클릭하면 상세페이지 전체를 확인할 수 있어요.</p>
+        <h1>MUNE STUDIO의 포트폴리오</h1>
+        <p>지금까지 진행한 프로젝트를 모두 만나보세요. 각 작업물을 클릭하면 상세페이지 전체를 확인할 수 있어요.</p>
       </div>
 
       <div class="works-filter fade-up">
@@ -659,113 +498,7 @@
       </div>
 
       <div class="works-more fade-up">
-        <a href="works.html" class="btn btn-outline">더 많은 작업물이 궁금하다면?</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section style="padding-top:0;padding-bottom:0;">
-    <div class="cta-band fade-up">
-      <h2>당신의 브랜드,<br>이제 MUNE STUDIO와 함께 완성하세요.</h2>
-      <p>작은 브랜드도 자신만의 이야기로 기억될 수 있습니다.</p>
-      <div class="cta-actions">
-        <a href="#contact" class="btn btn-primary magnetic">프로젝트 문의하기</a>
-        <a href="#works" class="btn btn-outline on-dark magnetic">포트폴리오 보기</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="section-head fade-up">
-        <span class="eyebrow">Contact</span>
-        <h2>프로젝트를 시작해볼까요?</h2>
-        <p>아래 정보를 남겨주시면 영업일 기준 1~2일 내에 담당자가 이메일로 회신드립니다.</p>
-      </div>
-
-      <div class="contact-grid fade-up">
-        <div class="contact-visual">
-          <div>
-            <h3>Your brand,<br>meet up with us.</h3>
-            <p>브랜드명과 프로젝트 개요만 알려주셔도 괜찮아요. 상세한 내용은 미팅에서 함께 구체화해요.</p>
-          </div>
-          <ul class="contact-info-list">
-            <li><b>Email</b>munestudio.creative@gmail.com</li>
-            <li><b>Studio</b>MUNE STUDIO · Design</li>
-            <li><b>Hours</b>Mon–Fri 10:00–19:00 (KST)</li>
-          </ul>
-        </div>
-
-        <div class="contact-form">
-          <form id="contactForm" action="https://formsubmit.co/munestudio.creative@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="[MUNE STUDIO] 새로운 프로젝트 문의">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://munestudio.kr/#contact">
-
-            <div class="form-row">
-              <div class="field">
-                <label>브랜드명 / 성함<span class="req">*</span></label>
-                <input type="text" name="브랜드명" placeholder="예) 뮨스튜디오" required>
-              </div>
-              <div class="field">
-                <label>연락처<span class="req">*</span></label>
-                <input type="tel" name="연락처" placeholder="010-0000-0000" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <label>이메일<span class="req">*</span></label>
-              <input type="email" name="이메일" placeholder="example@email.com" required>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label>희망 서비스</label>
-                <select name="희망 서비스">
-                  <option>브랜딩</option>
-                  <option>상세페이지</option>
-                  <option>컨텐츠디자인</option>
-                  <option>로고디자인</option>
-                  <option>패키지</option>
-                  <option>AI 연출컷</option>
-                  <option>기타 / 잘 모르겠어요</option>
-                </select>
-              </div>
-              <div class="field">
-                <label>예상 예산</label>
-                <select name="예상 예산">
-                  <option>미정 / 상담 후 결정</option>
-                  <option>100만원 이하</option>
-                  <option>100~300만원</option>
-                  <option>300~500만원</option>
-                  <option>500만원 이상</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label>문의 내용<span class="req">*</span></label>
-              <textarea name="문의 내용" placeholder="프로젝트에 대해 간단히 알려주세요." required></textarea>
-            </div>
-
-            <label class="consent">
-              <input type="checkbox" required>
-              문의를 위해 남겨주신 개인정보는 답변 목적 외에는 사용되지 않으며, 상담 완료 후 안전하게 폐기됩니다. 내용에 동의합니다.
-            </label>
-
-            <button type="submit" class="btn btn-primary">문의 보내기</button>
-            <p class="form-note">전송 시 munestudio.creative@gmail.com 으로 문의 내용이 전달됩니다.</p>
-          </form>
-
-          <div class="form-success" id="formSuccess">
-            <div class="check">✓</div>
-            <h3>문의가 접수되었습니다.</h3>
-            <p>빠른 시일 내에 남겨주신 이메일로 답변드리겠습니다. 감사합니다.</p>
-          </div>
-        </div>
+        <a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의하기</a>
       </div>
     </div>
   </section>
@@ -783,8 +516,8 @@
         <div class="footer-col">
           <h4>Menu</h4>
           <ul>
-            <li><a href="#about">소개</a></li>
-            <li><a href="#services">서비스</a></li>
+            <li><a href="index.html#about">소개</a></li>
+            <li><a href="index.html#services">서비스</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -808,7 +541,6 @@
 </footer>
 
 <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
-
 <script>
   // header scroll state + scroll progress bar
   const header = document.getElementById('siteHeader');
@@ -1168,3 +900,4 @@
 </script>
 </body>
 </html>
+

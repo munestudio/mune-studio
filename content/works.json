@@ -2,6 +2,7 @@
   "items": [
     {
       "title": "[푸드] 수제 손만두 상세페이지 디자인 / Handmade Mandu Design",
+      "slug": "mandu",
       "category": "detail",
       "client": "",
       "year": "2026",
@@ -11,12 +12,22 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/cde587254151263.6a7bab9ba24f6.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/9745cc254151263.6a7bab9ba1d57.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/24bee0254151263.6a7bab9ba285a.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/8fdd9d254151263.6a7bab9ba2168.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/8fdd9d254151263.6a7bab9ba2168.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c52b40254151263.6a7bab9ba4304.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3a997b254151263.6a7bab9ba3f9d.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/fb8727254151263.6a7bab9ba4916.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/882866254151263.6a7bab9ba4624.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/641c21254151263.6a7bab9ba2f31.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/5aa9d9254151263.6a7bab9ba3278.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/57bc6d254151263.6a7bab9ba38fc.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1e7732254151263.6a7bab9ba3c33.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/aa8800254151263.6a7bab9ba35b9.jpg"
       ]
     },
     {
       "title": "[건강기능식품] 유칼립투스 프로폴리스 상세페이지 디자인 / Propolis Supplement",
-      "category": "detail",
+      "slug": "propolis",
+      "category": "ai_cut",
       "client": "",
       "year": "2026",
       "image": "https://mir-s3-cdn-cf.behance.net/projects/404/4813e9254150881.Y3JvcCw5OTksNzgyLDAsMTA4.jpg",
@@ -25,11 +36,17 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/bd9179254150881.6a7ba7b66e23f.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3d380b254150881.6a7ba7b66fe3e.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ce8771254150881.6a7ba7b66f97d.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e7e5d9254150881.6a7ba7b66e852.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e7e5d9254150881.6a7ba7b66e852.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ade1e0254150881.6a7ba7b66daf6.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/360d49254150881.6a7ba7b66f1e0.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/25d60a254150881.6a7ba7b670337.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c9bd4f254150881.6a7ba7b66eda0.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b999f0254150881.6a7ba7b66f575.jpg"
       ]
     },
     {
       "title": "[반려동물용품] 애견 3D 쿨매트 상세페이지 디자인 / Pet Cooling Mat Design",
+      "slug": "pet-cooling-mat",
       "category": "detail",
       "client": "",
       "year": "2026",
@@ -39,11 +56,16 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/168b52254150451.6a7ba2f0ae104.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/279ce4254150451.6a7ba2f0ae55d.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/a727ad254150451.6a7ba2f0aee0c.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f1464f254150451.6a7ba2f0afbdd.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f1464f254150451.6a7ba2f0afbdd.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c5ca26254150451.6a7ba2f0af231.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c6eda9254150451.6a7ba2f0ae99c.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1d246e254150451.6a7ba2f0affec.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e0bc03254150451.6a7ba2f0af7d3.jpg"
       ]
     },
     {
       "title": "[반려동물가구] 모듈러 펫하우스 상세페이지 디자인 / Modular Pet House Design",
+      "slug": "pet-house",
       "category": "detail",
       "client": "",
       "year": "2026",
@@ -53,11 +75,22 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/4644d5254146743.6a7b89104dab6.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/058f06254146743.6a7b89104cd22.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3cedf9254146743.6a7b89104b6b0.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e626d0254146743.6a7b89104bfbe.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e626d0254146743.6a7b89104bfbe.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/eae379254146743.6a7b89104e546.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/cb4ed0254146743.6a7b89104ea01.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/794c1c254146743.6a7b89104c8a3.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f314fd254146743.6a7b89104dfce.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b74aa5254146743.6a7b89104d611.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/48210f254146743.6a7b89104c40b.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/49b007254146743.6a7b89104bb53.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b164ab254146743.6a7b89104ee4c.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/470e9a254146743.6a7b89104b1a1.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1e6337254146743.6a7b89104d171.jpg"
       ]
     },
     {
       "title": "[건강기능식품] 산양산삼 추출물 상세페이지 디자인 / Ginseng Extract Design",
+      "slug": "ginseng",
       "category": "detail",
       "client": "",
       "year": "2026",
@@ -67,21 +100,46 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/620919254144293.6a7b791056ab7.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/14c3e1254144293.6a7b7910582c7.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e2d2dd254144293.6a7b791057b3e.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/bbb815254144293.6a7b791059334.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/bbb815254144293.6a7b791059334.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/5812dc254144293.6a7b79105bc4c.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1325dd254144293.6a7b79105dfa8.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/076fff254144293.6a7b79105ca27.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3cbc04254144293.6a7b79105d0bd.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/27106c254144293.6a7b7910573ec.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f20766254144293.6a7b79105b521.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/336143254144293.6a7b79105a492.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/f72f30254144293.6a7b79105c348.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/a3e495254144293.6a7b79105adaa.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/840c0f254144293.6a7b79105d84b.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e8a7b2254144293.6a7b791058aea.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/6c125a254144293.6a7b791059b9c.jpg"
       ]
     },
     {
       "title": "[식품/이너뷰티] 다이어트 캔디 상세페이지 제작",
+      "slug": "diet-candy",
       "category": "detail",
       "client": "",
       "year": "2026",
       "image": "https://mir-s3-cdn-cf.behance.net/projects/404/7d2906254142665.Y3JvcCw5OTksNzgyLDAsMTA4.jpg",
       "description": "이너뷰티 다이어트 캔디 제품의 상세페이지 디자인.",
       "gallery": [
+        "https://mir-s3-cdn-cf.behance.net/project_modules/source/02ef62254142665.6a7b70e10f49f.gif",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/473938254142665.6a7b70e112c92.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/bf3625254142665.6a7b70e111031.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/750a7a254142665.6a7b70e10f8c7.jpg",
-        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/845279254142665.6a7b70e110066.jpg"
+        "https://mir-s3-cdn-cf.behance.net/project_modules/source/630644254142665.6a7b70e111bac.gif",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/845279254142665.6a7b70e110066.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/8d4d38254142665.6a7b70e110772.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/700715254142665.6a7b70e112785.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e5ba56254142665.6a7b70e111f3a.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/75c86d254142665.6a7b70e1103e5.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/source/c450bb254142665.6a7b70e1113fb.gif",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/source/dba995254142665.6a7b70e1117da.gif",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/427363254142665.6a7b70e1122de.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/358a14254142665.6a7b70e10fc99.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e9adde254142665.6a7b70e110c42.jpg",
+        "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/d5d1af254142665.6a7b70e113174.jpg"
       ]
     }
   ]

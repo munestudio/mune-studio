@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포트폴리오 상세 | MUNE STUDIO</title>
+<meta name="description" content="MUNE STUDIO 포트폴리오 프로젝트 상세보기.">
+<link rel="canonical" href="https://munestudio.kr/work-detail.html">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#ff5a28;
+    --orange-dark:#e8341f;
+    --font-kr:'Noto Sans KR', 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+    --font-en:'Archivo', 'Helvetica Neue', sans-serif;
+    --black:#16171a;
+    --gray-900:#1f2023;
+    --gray-600:#6b6d74;
+    --gray-400:#9a9ca3;
+    --gray-200:#e6e5e2;
+    --gray-100:#f2f1ee;
+    --paper:#faf9f6;
+    --white:#ffffff;
+    --radius:18px;
+    --maxw:1200px;
+    --ease:cubic-bezier(.16,.84,.44,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-kr),"Pretendard","Apple SD Gothic Neo","Malgun Gothic",-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--black);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;margin:0;padding:0;}
+  button{font-family:inherit;cursor:pointer;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--orange);
+    margin-bottom:14px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 28px;
+    border-radius:100px;
+    font-weight:700;
+    font-size:15px;
+    border:1.5px solid transparent;
+    transition:all .25s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--orange);color:#fff;}
+  .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:var(--black);border-color:var(--gray-200);}
+  .btn-outline:hover{border-color:var(--black);transform:translateY(-2px);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s var(--ease);
+  }
+  header.scrolled{border-bottom-color:var(--gray-200);}
+  .nav{
+    max-width:var(--maxw);margin:0 auto;padding:0 32px;
+    height:82px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-size:22px;font-weight:800;letter-spacing:-.02em;
+    display:flex;align-items:center;gap:2px;
+  }
+  .logo span{color:var(--orange);}
+  .nav-links{display:flex;align-items:center;gap:40px;}
+  .nav-links a{
+    font-size:15px;font-weight:600;color:var(--gray-900);
+    position:relative;padding:4px 0;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--orange);
+    transition:width .25s var(--ease);
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .burger{display:none;width:26px;height:20px;position:relative;background:none;border:none;padding:0;}
+  .burger span{position:absolute;left:0;width:100%;height:2px;background:var(--black);border-radius:2px;transition:all .3s var(--ease);}
+  .burger span:nth-child(1){top:0;}
+  .burger span:nth-child(2){top:9px;}
+  .burger span:nth-child(3){top:18px;}
+  .burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg);}
+
+  .mobile-menu{
+    position:fixed;top:82px;left:0;right:0;bottom:0;background:#fff;z-index:999;
+    display:flex;flex-direction:column;padding:20px 32px 40px;gap:4px;
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:all .3s var(--ease);
+  }
+  .mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .mobile-menu a{font-size:22px;font-weight:700;padding:16px 0;border-bottom:1px solid var(--gray-100);}
+  .mobile-menu .btn{margin-top:24px;width:100%;}
+
+  /* ---------- detail layout ---------- */
+  .detail-section{padding:150px 0 120px;}
+  .detail-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--gray-600);margin-bottom:34px;}
+  .detail-back:hover{color:var(--orange);}
+  .detail-hero{width:100%;border-radius:24px;overflow:hidden;background:var(--gray-100);}
+  .detail-hero img{width:100%;display:block;}
+  .detail-head{max-width:760px;margin:44px 0 0;}
+  .detail-cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);}
+  .detail-head h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.28;margin:12px 0 0;}
+  .detail-meta{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);}
+  .detail-meta-item{padding:20px 32px 20px 0;margin-right:32px;}
+  .detail-meta-item:first-child{padding-left:0;}
+  .detail-meta-item b{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;}
+  .detail-meta-item span{font-size:15px;font-weight:700;color:var(--gray-900);}
+  .detail-desc{max-width:760px;margin-top:36px;font-size:16.5px;line-height:1.9;color:var(--gray-900);white-space:pre-line;}
+  .detail-divider{margin:64px 0;border-radius:20px;background:linear-gradient(120deg,var(--orange),var(--orange-dark));padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff;flex-wrap:wrap;}
+  .detail-divider .mark{font-size:20px;font-weight:800;letter-spacing:-.01em;}
+  .detail-divider .word{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.85;}
+  .detail-gallery{display:flex;flex-direction:column;gap:6px;border-radius:20px;overflow:hidden;}
+  .detail-gallery img{width:100%;display:block;}
+  .detail-cta{margin-top:70px;text-align:center;padding:64px 32px;background:var(--paper);border-radius:28px;}
+  .detail-cta h2{font-size:clamp(22px,3vw,30px);font-weight:800;margin:0 0 12px;letter-spacing:-.02em;}
+  .detail-cta p{color:var(--gray-600);font-size:15px;margin:0 0 28px;}
+  .detail-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .detail-empty{padding:220px 0 160px;text-align:center;}
+  .detail-empty h1{font-size:26px;font-weight:800;margin:0 0 14px;}
+  .detail-empty p{color:var(--gray-600);margin:0 0 28px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--orange);color:#fff;padding:64px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.28);}
+  .footer-logo{font-size:24px;font-weight:800;}
+  .footer-tag{margin-top:10px;font-size:14.5px;color:rgba(255,255,255,.85);max-width:340px;line-height:1.7;}
+  .footer-cols{display:flex;gap:70px;flex-wrap:wrap;}
+  .footer-col h4{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px;color:rgba(255,255,255,.75);}
+  .footer-col ul{display:grid;gap:10px;}
+  .footer-col a{font-size:14.5px;font-weight:600;}
+  .footer-col a:hover{text-decoration:underline;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:26px;font-size:13px;color:rgba(255,255,255,.8);}
+  .social{display:flex;gap:12px;}
+  .social a{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;transition:all .2s var(--ease);}
+  .social a:hover{background:#fff;color:var(--orange);border-color:#fff;}
+
+  .to-top{
+    position:fixed;right:28px;bottom:28px;width:48px;height:48px;border-radius:50%;
+    background:var(--black);color:#fff;display:flex;align-items:center;justify-content:center;
+    border:none;font-size:18px;z-index:900;opacity:0;pointer-events:none;transition:all .3s var(--ease);
+  }
+  .to-top.show{opacity:1;pointer-events:auto;}
+  .to-top:hover{background:var(--orange);transform:translateY(-3px);}
+
+  #scrollProgress{
+    position:fixed;top:0;left:0;height:3px;width:0%;
+    background:linear-gradient(90deg,var(--orange),#ff8a5c);
+    z-index:1200;transition:width .1s linear;
+  }
+
+  .cursor-dot,.cursor-ring{
+    position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:1100;
+    transform:translate(-50%,-50%);
+  }
+  .cursor-dot{width:7px;height:7px;background:var(--orange);}
+  .cursor-ring{
+    width:38px;height:38px;border:1.5px solid rgba(240,78,35,.55);
+    transition:width .25s var(--ease),height .25s var(--ease),border-color .25s var(--ease),opacity .25s var(--ease);
+  }
+  .cursor-ring.hover{width:64px;height:64px;border-color:var(--orange);background:rgba(240,78,35,.08);}
+  @media (pointer:coarse), (max-width:720px){
+    .cursor-dot,.cursor-ring{display:none;}
+  }
+  .magnetic{will-change:transform;}
+
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .nav-right .btn{display:none;}
+    .burger{display:block;}
+    .wrap{padding:0 20px;}
+    .detail-section{padding:120px 0 80px;}
+    .detail-hero{border-radius:16px;}
+    .detail-meta-item{padding-right:22px;margin-right:22px;}
+    .detail-divider{padding:26px 24px;}
+    .detail-cta{padding:44px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<header id="siteHeader">
+  <div class="nav">
+    <a href="index.html" class="logo">MUNE<span>.</span>STUDIO</a>
+    <nav class="nav-links">
+      <a href="index.html#about">소개</a>
+      <a href="index.html#services">서비스</a>
+      <a href="works.html">포트폴리오</a>
+      <a href="index.html#contact">문의</a>
+    </nav>
+    <div class="nav-right">
+      <a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의</a>
+      <button class="burger" id="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about">소개</a>
+  <a href="index.html#services">서비스</a>
+  <a href="works.html">포트폴리오</a>
+  <a href="index.html#contact">문의</a>
+  <a href="index.html#contact" class="btn btn-primary">프로젝트 문의</a>
+</div>
+
+<main id="top">
+  <section class="detail-section" id="detailSection">
+    <div class="wrap" id="detailWrap">
+      <!-- JS로 content/works.json에서 불러와 채워집니다 -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">MUNE.STUDIO</div>
+        <p class="footer-tag">브랜드의 진짜 이야기를 디자인으로 완성하는 디자인 스튜디오, MUNE STUDIO입니다.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html#about">소개</a></li>
+            <li><a href="index.html#services">서비스</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="http://pf.kakao.com/_hxjbxgn" target="_blank" rel="noopener">카카오채널 상담 · 뮨스튜디오</a></li>
+            <li><a href="mailto:munestudio.creative@gmail.com">munestudio.creative@gmail.com</a></li>
+            <li>Mon–Fri 10:00–19:00 (KST)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>MUNE STUDIO · munestudio.kr | 상호명: 뮨스튜디오(MUNE STUDIO) | 대표: 송진희 | 사업자등록번호: 486-01-03815</span>
+      <div class="social">
+        <a href="https://www.instagram.com/munestudio.design/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.behance.net/1bb5a5b4" target="_blank" rel="noopener" aria-label="Behance">Be</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+<script>
+  // header scroll state + scroll progress bar
+  const header = document.getElementById('siteHeader');
+  const toTop = document.getElementById('toTop');
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+    toTop.classList.toggle('show', window.scrollY > 600);
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // custom cursor (fine-pointer devices only)
+  if (window.matchMedia('(pointer:fine)').matches) {
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    });
+    (function loop(){
+      rx += (mx - rx) * 0.16;
+      ry += (my - ry) * 0.16;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
+    function bindCursorTargets(){
+      document.querySelectorAll('a, button, input, textarea, select').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+      });
+    }
+    bindCursorTargets();
+
+    // magnetic buttons
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const relX = e.clientX - r.left - r.width / 2;
+        const relY = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${relX * 0.25}px, ${relY * 0.25}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }));
+
+  // to top
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ---------- project detail rendering ----------
+  const CAT_LABEL = { branding: 'Branding', detail: 'Detail Page', content: 'Content Design', logo: 'Logo Design', package: 'Package', ai_cut: 'AI Visual' };
+  function escapeHtml(str) {
+    return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  async function renderDetail() {
+    const wrapEl = document.getElementById('detailWrap');
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+
+    let items = [];
+    try {
+      const res = await fetch('content/works.json', { cache: 'no-store' });
+      const data = await res.json();
+      items = Array.isArray(data.items) ? data.items : [];
+    } catch (e) {
+      console.warn('포트폴리오 데이터를 불러오지 못했습니다.', e);
+    }
+
+    let item = null, idx = -1;
+    if (id != null) {
+      idx = items.findIndex((it, i) => (it.slug && it.slug === id) || String(i) === id);
+      if (idx > -1) item = items[idx];
+    }
+
+    if (!item) {
+      wrapEl.parentElement.classList.add('detail-empty');
+      wrapEl.innerHTML =
+        '<h1>프로젝트를 찾을 수 없어요</h1>' +
+        '<p>주소가 잘못되었거나 삭제된 작업물이에요.</p>' +
+        '<a href="works.html" class="btn btn-primary magnetic">포트폴리오로 돌아가기</a>';
+      return;
+    }
+
+    document.title = (item.title || '포트폴리오') + ' | MUNE STUDIO';
+
+    const catKey = item.category || 'branding';
+    const catLabel = CAT_LABEL[catKey] || catKey;
+    const hasImage = !!(item.image && String(item.image).trim());
+    const galleryItems = Array.isArray(item.gallery)
+      ? item.gallery.map((g) => (typeof g === 'string' ? g : g && g.src)).filter(Boolean)
+      : [];
+
+    const metaHtml = [
+      item.client ? `<div class="detail-meta-item"><b>Client</b><span>${escapeHtml(item.client)}</span></div>` : '',
+      item.year ? `<div class="detail-meta-item"><b>Year</b><span>${escapeHtml(item.year)}</span></div>` : '',
+      `<div class="detail-meta-item"><b>Category</b><span>${escapeHtml(catLabel)}</span></div>`,
+    ].join('');
+
+    wrapEl.innerHTML =
+      `<a class="detail-back" href="works.html">← 포트폴리오</a>` +
+      (hasImage ? `<div class="detail-hero"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title || '')}"></div>` : '') +
+      `<div class="detail-head">` +
+        `<span class="detail-cat">${escapeHtml(catLabel)}</span>` +
+        `<h1>${escapeHtml(item.title || '')}</h1>` +
+      `</div>` +
+      `<div class="detail-meta">${metaHtml}</div>` +
+      (item.description ? `<p class="detail-desc">${escapeHtml(item.description)}</p>` : '') +
+      (galleryItems.length ? `<div class="detail-divider"><span class="mark">MUNE.STUDIO</span><span class="word">Project Gallery</span></div>` : '') +
+      (galleryItems.length ? `<div class="detail-gallery">${galleryItems.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.title || '')}" loading="lazy">`).join('')}</div>` : '') +
+      `<div class="detail-cta">` +
+        `<h2>더 많은 작업물이 궁금하다면?</h2>` +
+        `<p>MUNE STUDIO의 다른 프로젝트도 함께 확인해보세요.</p>` +
+        `<div class="detail-cta-actions">` +
+          `<a href="works.html" class="btn btn-outline magnetic">포트폴리오 더 보기</a>` +
+          `<a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의하기</a>` +
+        `</div>` +
+      `</div>`;
+
+    if (window.matchMedia('(pointer:fine)').matches) {
+      const ring = document.getElementById('cursorRing');
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+      });
+      document.querySelectorAll('.magnetic').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const r = btn.getBoundingClientRect();
+          const relX = e.clientX - r.left - r.width / 2;
+          const relY = e.clientY - r.top - r.height / 2;
+          btn.style.transform = `translate(${relX * 0.25}px, ${relY * 0.25}px)`;
+        });
+        btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+      });
+    }
+  }
+  renderDetail();
+</script>
+<!-- Netlify Identity: 관리자 초대 메일 링크가 홈페이지로 열릴 때 로그인 처리 후 /admin 으로 이동시켜줍니다. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', (user) => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+      }
+    });
+  }
+</script>
+</body>
+</html>
