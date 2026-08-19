@@ -211,6 +211,20 @@
   .section-head{max-width:640px;margin-bottom:60px;}
   .section-head h2,.section-head h1{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.3;margin:0 0 18px;}
   .section-head p{font-size:16px;color:var(--gray-600);line-height:1.75;margin:0;}
+  .works-head{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:50px;flex-wrap:wrap;
+    padding-bottom:44px;margin-bottom:44px;border-bottom:1px solid var(--gray-200);
+  }
+  .works-head-main h1{font-size:clamp(30px,4.2vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.25;margin:14px 0 0;}
+  .works-head-side{max-width:360px;display:flex;flex-direction:column;align-items:flex-start;gap:20px;}
+  .works-head-side p{font-size:15px;color:var(--gray-600);line-height:1.75;margin:0;}
+  .works-count{display:flex;align-items:baseline;gap:9px;}
+  .works-count b{font-size:36px;font-weight:800;color:var(--orange);letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+  .works-count span{font-size:12.5px;font-weight:700;color:var(--gray-600);letter-spacing:.06em;text-transform:uppercase;}
+  @media (max-width:720px){
+    .works-head{flex-direction:column;align-items:flex-start;gap:26px;}
+    .works-head-side{max-width:none;}
+  }
   .fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
   .fade-up.in{opacity:1;transform:translateY(0);}
 
@@ -263,15 +277,22 @@
   }
   .work-card .work-thumb img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s var(--ease);}
   .work-card:hover .work-thumb img{transform:scale(1.025);}
-  .work-card h3{
-    font-size:15.5px;font-weight:700;margin:0;letter-spacing:-.01em;line-height:1.45;color:var(--black);
+  .work-card .work-title{
     background:#fff;border-top:1px solid rgba(0,0,0,.13);
-    padding:14px 18px;height:80px;box-sizing:border-box;
-    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;-webkit-box-pack:center;overflow:hidden;
-    transition:background .2s var(--ease),color .2s,border-color .2s;
+    padding:16px 18px 15px;box-sizing:border-box;
+    transition:background .2s var(--ease);
   }
+  .work-card h3{
+    font-size:17px;font-weight:800;margin:0 0 10px;letter-spacing:-.01em;color:var(--black);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    transition:color .2s;
+  }
+  .work-meta{display:grid;gap:3px;}
+  .work-meta span{display:block;font-size:12.5px;color:var(--gray-600);line-height:1.6;transition:color .2s;}
   .work-card:hover{border-color:var(--orange);}
-  .work-card:hover h3{background:var(--orange);color:#fff;border-color:var(--orange);}
+  .work-card:hover .work-title{background:var(--orange);}
+  .work-card:hover h3{color:#fff;}
+  .work-card:hover .work-meta span{color:rgba(255,255,255,.85);}
   .work-card.hide{display:none;}
   .g1{background:linear-gradient(135deg,#F04E23,#ff8a5c);}
   .g2{background:linear-gradient(135deg,#171819,#3c3d40);}
@@ -491,10 +512,15 @@
   <!-- WORKS (full portfolio page) -->
   <section id="works">
     <div class="wrap">
-      <div class="section-head fade-up">
-        <span class="eyebrow">Works</span>
-        <h1>MUNE STUDIO의 포트폴리오</h1>
-        <p>지금까지 진행한 프로젝트를 모두 만나보세요. 각 작업물을 클릭하면 상세페이지 전체를 확인할 수 있어요.</p>
+      <div class="works-head fade-up">
+        <div class="works-head-main">
+          <span class="eyebrow">Works</span>
+          <h1>지금까지 완성한<br>브랜드의 이야기</h1>
+        </div>
+        <div class="works-head-side">
+          <p>이야기가 있는 브랜드는 오래 기억됩니다. 프로젝트를 클릭하면 상세페이지 전체를 확인할 수 있어요.</p>
+          <div class="works-count"><b id="worksCount">00</b><span>Projects</span></div>
+        </div>
       </div>
 
       <div class="works-filter fade-up">
@@ -850,6 +876,7 @@
 
   // works: load portfolio items from content/works.json (edited via /admin) and render cards
   const CAT_LABEL = { branding: 'Branding', detail: 'Detail Page', content: 'Content Design', logo: 'Logo Design', package: 'Package', ai_cut: 'AI Visual' };
+  const CAT_LABEL_KO = { branding: '브랜딩', detail: '상세페이지', content: '컨텐츠디자인', logo: '로고디자인', package: '패키지', ai_cut: 'AI 연출컷' };
   function escapeHtml(str) {
     return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
@@ -870,13 +897,24 @@
       const thumbClass = 'work-thumb' + (hasImage ? '' : ' g' + ((i % 10) + 1));
       const thumbInner = hasImage ? `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title || '')}" loading="lazy">` : '';
       const slug = item.slug || String(i);
+      const cardTitle = item.shortTitle || item.title || '';
+      const workLabel = CAT_LABEL_KO[catKey] || catKey;
+      const productType = item.productType || '';
       return `<a class="work-card fade-up" data-cat="${escapeHtml(catKey)}" href="work-detail.html?id=${encodeURIComponent(slug)}">` +
         `<div class="${thumbClass}">${thumbInner}</div>` +
-        `<h3>${escapeHtml(item.title)}</h3>` +
+        `<div class="work-title">` +
+          `<h3>${escapeHtml(cardTitle)}</h3>` +
+          `<div class="work-meta">` +
+            (productType ? `<span>Category / ${escapeHtml(productType)}</span>` : '') +
+            `<span>Work / ${escapeHtml(workLabel)}</span>` +
+          `</div>` +
+        `</div>` +
         `</a>`;
     }).join('');
     const cards = grid.querySelectorAll('.work-card');
     cards.forEach((el) => observer.observe(el));
+    const countEl = document.getElementById('worksCount');
+    if (countEl) countEl.textContent = String(items.length).padStart(2, '0');
     return cards;
   }
 

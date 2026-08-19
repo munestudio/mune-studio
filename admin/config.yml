@@ -20,7 +20,9 @@ collections:
             widget: "list"
             summary: "{{title}} ({{category}})"
             fields:
-              - { label: "제목", name: "title", widget: "string" }
+              - { label: "제목 (상세페이지용, 긴 제목 가능)", name: "title", widget: "string" }
+              - { label: "카드용 짧은 제목 (목록에 표시)", name: "shortTitle", widget: "string", required: false, hint: "예: 수제 손만두 — 비워두면 위 제목이 그대로 쓰여요" }
+              - { label: "제품 종류 (카드에 'Category /'로 표시)", name: "productType", widget: "string", required: false, hint: "간결하게, 예: 반려동물 가구 — 상세페이지 문구를 그대로 끌어오지 마세요" }
               - { label: "URL 슬러그 (영문/숫자, 상세페이지 주소로 사용)", name: "slug", widget: "string", required: false, hint: "예: mandu, propolis — 비워두면 자동으로 번호가 부여돼요" }
               - label: "카테고리"
                 name: "category"

@@ -22,7 +22,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/57bc6d254151263.6a7bab9ba38fc.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1e7732254151263.6a7bab9ba3c33.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/aa8800254151263.6a7bab9ba35b9.jpg"
-      ]
+      ],
+      "shortTitle": "수제 만두 브랜드",
+      "productType": "식품 브랜드"
     },
     {
       "title": "[건강기능식품] 유칼립투스 프로폴리스 상세페이지 디자인 / Propolis Supplement",
@@ -42,7 +44,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/25d60a254150881.6a7ba7b670337.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c9bd4f254150881.6a7ba7b66eda0.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b999f0254150881.6a7ba7b66f575.jpg"
-      ]
+      ],
+      "shortTitle": "유칼립투스 프로폴리스",
+      "productType": "건강기능식품"
     },
     {
       "title": "[반려동물용품] 애견 3D 쿨매트 상세페이지 디자인 / Pet Cooling Mat Design",
@@ -61,7 +65,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/c6eda9254150451.6a7ba2f0ae99c.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1d246e254150451.6a7ba2f0affec.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e0bc03254150451.6a7ba2f0af7d3.jpg"
-      ]
+      ],
+      "shortTitle": "반려동물 쿨매트",
+      "productType": "반려동물 용품"
     },
     {
       "title": "[반려동물가구] 모듈러 펫하우스 상세페이지 디자인 / Modular Pet House Design",
@@ -86,7 +92,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b164ab254146743.6a7b89104ee4c.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/470e9a254146743.6a7b89104b1a1.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/1e6337254146743.6a7b89104d171.jpg"
-      ]
+      ],
+      "shortTitle": "반려동물 디자인 하우스",
+      "productType": "반려동물 가구"
     },
     {
       "title": "[건강기능식품] 산양산삼 추출물 상세페이지 디자인 / Ginseng Extract Design",
@@ -113,7 +121,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/840c0f254144293.6a7b79105d84b.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e8a7b2254144293.6a7b791058aea.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/6c125a254144293.6a7b791059b9c.jpg"
-      ]
+      ],
+      "shortTitle": "산양산삼 건강기능식품",
+      "productType": "건강기능식품"
     },
     {
       "title": "[식품/이너뷰티] 다이어트 캔디 상세페이지 제작",
@@ -140,7 +150,9 @@
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/358a14254142665.6a7b70e10fc99.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/e9adde254142665.6a7b70e110c42.jpg",
         "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/d5d1af254142665.6a7b70e113174.jpg"
-      ]
+      ],
+      "shortTitle": "다이어트 캔디",
+      "productType": "이너뷰티 식품"
     }
   ]
 }
