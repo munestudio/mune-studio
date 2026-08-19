@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>포트폴리오 상세 | MUNE STUDIO</title>
-<meta name="description" content="MUNE STUDIO 포트폴리오 프로젝트 상세보기.">
+<title>개인정보처리방침 | MUNE STUDIO</title>
+<meta name="description" content="MUNE STUDIO 개인정보처리방침입니다.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%226%22%20fill%3D%22%2316171a%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%226.5%22%20fill%3D%22%23ff5a28%22/%3E%3C/svg%3E">
-<link rel="canonical" href="https://munestudio.kr/work-detail.html">
+<link rel="canonical" href="https://munestudio.kr/privacy.html">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -46,15 +46,6 @@
   ul{list-style:none;margin:0;padding:0;}
   button{font-family:inherit;cursor:pointer;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  .eyebrow{
-    display:inline-block;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--orange);
-    margin-bottom:14px;
-  }
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
     padding:15px 28px;
@@ -121,22 +112,29 @@
   .mobile-menu a{font-size:22px;font-weight:700;padding:16px 0;border-bottom:1px solid var(--gray-100);}
   .mobile-menu .btn{margin-top:24px;width:100%;}
 
-  /* ---------- detail layout ---------- */
-  .detail-section{padding:150px 0 120px;}
-  .detail-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--gray-600);margin-bottom:34px;}
-  .detail-back:hover{color:var(--orange);}
-  .detail-head{max-width:820px;margin:0 auto 48px;text-align:center;}
-  .detail-cat{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);}
-  .detail-head h1{font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.4;margin:12px 0 0;}
-  .detail-gallery{display:flex;flex-direction:column;gap:0;max-width:860px;margin:0 auto;background:var(--gray-100);}
-  .detail-gallery img{width:100%;display:block;}
-  .detail-cta{margin-top:70px;text-align:center;padding:64px 32px;background:var(--paper);border-radius:28px;}
-  .detail-cta h2{font-size:clamp(22px,3vw,30px);font-weight:800;margin:0 0 12px;letter-spacing:-.02em;}
-  .detail-cta p{color:var(--gray-600);font-size:15px;margin:0 0 28px;}
-  .detail-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-  .detail-empty{padding:220px 0 160px;text-align:center;}
-  .detail-empty h1{font-size:26px;font-weight:800;margin:0 0 14px;}
-  .detail-empty p{color:var(--gray-600);margin:0 0 28px;}
+  /* ---------- policy layout ---------- */
+  .policy-section{padding:150px 0 120px;}
+  .policy-head{max-width:760px;margin:0 auto 56px;}
+  .policy-head .eyebrow{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--orange);margin-bottom:14px;
+  }
+  .policy-head h1{font-size:clamp(28px,3.6vw,40px);font-weight:800;letter-spacing:-.02em;margin:0 0 14px;}
+  .policy-head p{color:var(--gray-600);font-size:15px;line-height:1.8;margin:0;}
+  .policy-body{max-width:760px;margin:0 auto;}
+  .policy-body article{padding:30px 0;border-top:1px solid var(--gray-200);}
+  .policy-body article:last-of-type{border-bottom:1px solid var(--gray-200);}
+  .policy-body h2{font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0 0 14px;}
+  .policy-body p{font-size:15px;line-height:1.85;color:var(--gray-900);margin:0 0 10px;}
+  .policy-body ul{display:grid;gap:8px;margin:14px 0;}
+  .policy-body ul li{font-size:15px;line-height:1.8;color:var(--gray-900);padding-left:16px;position:relative;}
+  .policy-body ul li::before{content:"·";position:absolute;left:0;color:var(--orange);font-weight:800;}
+  .policy-body table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
+  .policy-body th,.policy-body td{text-align:left;padding:11px 12px;border:1px solid var(--gray-200);line-height:1.6;}
+  .policy-body th{background:var(--gray-100);font-weight:700;width:32%;}
+  .policy-foot{max-width:760px;margin:44px auto 0;font-size:13.5px;color:var(--gray-400);}
+  .policy-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--gray-600);margin-bottom:34px;}
+  .policy-back:hover{color:var(--orange);}
 
   /* ---------- Footer ---------- */
   footer{background:var(--orange);color:#fff;padding:64px 0 30px;}
@@ -176,36 +174,19 @@
     z-index:1200;transition:width .1s linear;
   }
 
-  .cursor-dot,.cursor-ring{
-    position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:1100;
-    transform:translate(-50%,-50%);
-  }
-  .cursor-dot{width:7px;height:7px;background:var(--orange);}
-  .cursor-ring{
-    width:38px;height:38px;border:1.5px solid rgba(240,78,35,.55);
-    transition:width .25s var(--ease),height .25s var(--ease),border-color .25s var(--ease),opacity .25s var(--ease);
-  }
-  .cursor-ring.hover{width:64px;height:64px;border-color:var(--orange);background:rgba(240,78,35,.08);}
-  @media (pointer:coarse), (max-width:720px){
-    .cursor-dot,.cursor-ring{display:none;}
-  }
-  .magnetic{will-change:transform;}
-
   @media (max-width:720px){
     .nav-links{display:none;}
     .nav-right .btn{display:none;}
     .burger{display:block;}
     .wrap{padding:0 20px;}
-    .detail-section{padding:120px 0 80px;}
-    .detail-cta{padding:44px 22px;}
+    .policy-section{padding:120px 0 80px;}
+    .policy-body th{width:40%;}
   }
 </style>
 </head>
 <body>
 
 <div id="scrollProgress"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-dot" id="cursorDot"></div>
 
 <header id="siteHeader">
   <div class="nav">
@@ -217,7 +198,7 @@
       <a href="index.html#contact">문의</a>
     </nav>
     <div class="nav-right">
-      <a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의</a>
+      <a href="index.html#contact" class="btn btn-primary">프로젝트 문의</a>
       <button class="burger" id="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -232,9 +213,89 @@
 </div>
 
 <main id="top">
-  <section class="detail-section" id="detailSection">
-    <div class="wrap" id="detailWrap">
-      <!-- JS로 content/works.json에서 불러와 채워집니다 -->
+  <section class="policy-section">
+    <div class="wrap">
+      <a class="policy-back" href="index.html">← 홈으로</a>
+      <div class="policy-head">
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>개인정보처리방침</h1>
+        <p>뮨스튜디오(MUNE STUDIO, 이하 "스튜디오")는 이용자의 개인정보를 소중히 다루며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 스튜디오가 운영하는 웹사이트(munestudio.kr)에서 이용자의 개인정보를 어떻게 수집·이용·보관·파기하는지 안내합니다.</p>
+      </div>
+
+      <div class="policy-body">
+        <article>
+          <h2>제1조 (수집하는 개인정보의 항목 및 수집방법)</h2>
+          <p>스튜디오는 프로젝트 문의(웹사이트 내 문의 폼) 접수를 위해 아래와 같은 개인정보를 이용자가 직접 입력하는 방식으로 수집합니다.</p>
+          <ul>
+            <li>필수 항목: 브랜드명/성함, 연락처, 이메일, 문의 내용</li>
+            <li>선택 항목: 희망 서비스, 예상 예산</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>제2조 (개인정보의 수집 및 이용목적)</h2>
+          <p>수집한 개인정보는 다음의 목적을 위해 활용되며, 목적이 변경되는 경우에는 별도의 동의를 받는 등 필요한 조치를 이행합니다.</p>
+          <ul>
+            <li>프로젝트 문의 내용 확인 및 상담·견적 회신</li>
+            <li>문의자와의 연락 및 커뮤니케이션</li>
+            <li>서비스 관련 안내 및 고지사항 전달</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>제3조 (개인정보의 보유 및 이용기간)</h2>
+          <p>스튜디오는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 다만, 상담이 실제 프로젝트 계약으로 이어지는 경우에는 계약 및 세금 관계 법령에 따라 아래 기간 동안 보관할 수 있습니다.</p>
+          <table>
+            <tr><th>문의 상담 기록</th><td>상담 종료 후 최대 6개월 (재문의 대비)</td></tr>
+            <tr><th>계약 및 결제 관련 기록</th><td>전자상거래 등에서의 소비자보호에 관한 법률 등 관계 법령에서 정한 기간</td></tr>
+          </table>
+        </article>
+
+        <article>
+          <h2>제4조 (개인정보의 파기절차 및 방법)</h2>
+          <p>이용자가 입력한 개인정보는 목적이 달성된 후 별도의 데이터베이스(DB)로 옮겨져(종이의 경우 별도 서류함) 내부 방침 및 관련 법령에 따라 일정 기간 저장된 후 파기됩니다. 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용해 삭제하며, 종이 문서는 분쇄기로 분쇄하거나 소각합니다.</p>
+        </article>
+
+        <article>
+          <h2>제5조 (개인정보 제공 및 위탁)</h2>
+          <p>스튜디오는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 웹사이트 문의 폼은 이메일 전달을 위해 아래와 같이 외부 서비스를 이용하고 있으며, 해당 서비스는 문의 내용을 스튜디오의 이메일로 전달하는 용도로만 사용됩니다.</p>
+          <ul>
+            <li>수탁업체: FormSubmit (formsubmit.co) — 문의 폼 데이터를 이메일로 전달하는 용도</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>제6조 (이용자 및 법정대리인의 권리와 그 행사방법)</h2>
+          <p>이용자는 언제든지 스튜디오가 보유한 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다. 아래 이메일로 연락 주시면 지체 없이 조치하겠습니다.</p>
+        </article>
+
+        <article>
+          <h2>제7조 (개인정보의 안전성 확보조치)</h2>
+          <p>스튜디오는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+          <ul>
+            <li>개인정보에 대한 접근을 최소한의 담당자로 제한</li>
+            <li>문의 내용은 목적 달성 후 지체 없이 파기</li>
+            <li>웹사이트 통신구간 암호화(HTTPS) 적용</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>제8조 (개인정보 보호책임자)</h2>
+          <p>스튜디오는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 이용자의 불만처리 및 피해구제를 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+          <table>
+            <tr><th>성명</th><td>송진희</td></tr>
+            <tr><th>소속/직책</th><td>MUNE STUDIO 대표</td></tr>
+            <tr><th>이메일</th><td><a href="mailto:munestudio.creative@gmail.com" style="color:var(--orange);font-weight:700;">munestudio.creative@gmail.com</a></td></tr>
+          </table>
+        </article>
+
+        <article>
+          <h2>제9조 (고지의 의무)</h2>
+          <p>본 개인정보처리방침은 법령, 정책 또는 보안기술의 변경에 따라 내용의 추가·삭제 및 수정이 있을 시에는 개정 최소 7일 전부터 웹사이트를 통해 공지하도록 하겠습니다.</p>
+        </article>
+      </div>
+
+      <p class="policy-foot">시행일자: 2026년 8월 19일</p>
     </div>
   </section>
 </main>
@@ -282,7 +343,6 @@
 </a>
 <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
 <script>
-  // header scroll state + scroll progress bar
   const header = document.getElementById('siteHeader');
   const toTop = document.getElementById('toTop');
   const progressBar = document.getElementById('scrollProgress');
@@ -294,42 +354,6 @@
     progressBar.style.width = scrolled + '%';
   });
 
-  // custom cursor (fine-pointer devices only)
-  if (window.matchMedia('(pointer:fine)').matches) {
-    const dot = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    let mx = -100, my = -100, rx = -100, ry = -100;
-    window.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-    });
-    (function loop(){
-      rx += (mx - rx) * 0.16;
-      ry += (my - ry) * 0.16;
-      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-      requestAnimationFrame(loop);
-    })();
-    function bindCursorTargets(){
-      document.querySelectorAll('a, button, input, textarea, select').forEach(el => {
-        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-      });
-    }
-    bindCursorTargets();
-
-    // magnetic buttons
-    document.querySelectorAll('.magnetic').forEach(btn => {
-      btn.addEventListener('mousemove', (e) => {
-        const r = btn.getBoundingClientRect();
-        const relX = e.clientX - r.left - r.width / 2;
-        const relY = e.clientY - r.top - r.height / 2;
-        btn.style.transform = `translate(${relX * 0.25}px, ${relY * 0.25}px)`;
-      });
-      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-    });
-  }
-
-  // mobile menu
   const burger = document.getElementById('burger');
   const mobileMenu = document.getElementById('mobileMenu');
   burger.addEventListener('click', () => {
@@ -341,99 +365,7 @@
     mobileMenu.classList.remove('open');
   }));
 
-  // to top
   toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-  // ---------- project detail rendering ----------
-  const CAT_LABEL = { branding: 'Branding', detail: 'Detail Page', content: 'Content Design', logo: 'Logo Design', package: 'Package', ai_cut: 'AI Visual' };
-  function escapeHtml(str) {
-    return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  }
-
-  async function renderDetail() {
-    const wrapEl = document.getElementById('detailWrap');
-    const params = new URLSearchParams(location.search);
-    const id = params.get('id');
-
-    let items = [];
-    try {
-      const res = await fetch('content/works.json', { cache: 'no-store' });
-      const data = await res.json();
-      items = Array.isArray(data.items) ? data.items : [];
-    } catch (e) {
-      console.warn('포트폴리오 데이터를 불러오지 못했습니다.', e);
-    }
-
-    let item = null, idx = -1;
-    if (id != null) {
-      idx = items.findIndex((it, i) => (it.slug && it.slug === id) || String(i) === id);
-      if (idx > -1) item = items[idx];
-    }
-
-    if (!item) {
-      wrapEl.parentElement.classList.add('detail-empty');
-      wrapEl.innerHTML =
-        '<h1>프로젝트를 찾을 수 없어요</h1>' +
-        '<p>주소가 잘못되었거나 삭제된 작업물이에요.</p>' +
-        '<a href="works.html" class="btn btn-primary magnetic">포트폴리오로 돌아가기</a>';
-      return;
-    }
-
-    document.title = (item.title || '포트폴리오') + ' | MUNE STUDIO';
-
-    const catKey = item.category || 'branding';
-    const catLabel = CAT_LABEL[catKey] || catKey;
-    const restGallery = (Array.isArray(item.gallery)
-      ? item.gallery.map((g) => (typeof g === 'string' ? g : g && g.src)).filter(Boolean)
-      : []).filter((src) => src !== item.image);
-    // 대표 이미지 + 갤러리를 하나로 이어서, 실제 상세페이지처럼 위에서 아래로 쭉 이어지게 보여줍니다.
-    const stackItems = [item.image, ...restGallery].filter(Boolean);
-
-    wrapEl.innerHTML =
-      `<a class="detail-back" href="works.html">← 포트폴리오</a>` +
-      `<div class="detail-head">` +
-        `<span class="detail-cat">${escapeHtml(catLabel)}</span>` +
-        `<h1>${escapeHtml(item.title || '')}</h1>` +
-      `</div>` +
-      (stackItems.length ? `<div class="detail-gallery">${stackItems.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.title || '')}" loading="lazy">`).join('')}</div>` : '') +
-      `<div class="detail-cta">` +
-        `<h2>더 많은 작업물이 궁금하다면?</h2>` +
-        `<p>MUNE STUDIO의 다른 프로젝트도 함께 확인해보세요.</p>` +
-        `<div class="detail-cta-actions">` +
-          `<a href="works.html" class="btn btn-outline magnetic">포트폴리오 더 보기</a>` +
-          `<a href="index.html#contact" class="btn btn-primary magnetic">프로젝트 문의하기</a>` +
-        `</div>` +
-      `</div>`;
-
-    if (window.matchMedia('(pointer:fine)').matches) {
-      const ring = document.getElementById('cursorRing');
-      document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-      });
-      document.querySelectorAll('.magnetic').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const r = btn.getBoundingClientRect();
-          const relX = e.clientX - r.left - r.width / 2;
-          const relY = e.clientY - r.top - r.height / 2;
-          btn.style.transform = `translate(${relX * 0.25}px, ${relY * 0.25}px)`;
-        });
-        btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-      });
-    }
-  }
-  renderDetail();
-</script>
-<!-- Netlify Identity: 관리자 초대 메일 링크가 홈페이지로 열릴 때 로그인 처리 후 /admin 으로 이동시켜줍니다. -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', (user) => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
-      }
-    });
-  }
 </script>
 </body>
 </html>

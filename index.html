@@ -184,7 +184,7 @@
   .hf-cta span{font-family:var(--font-en);}
   .hf-close{
     position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;gap:30px;color:#fff;
+    align-items:center;justify-content:center;gap:30px;color:#fff;pointer-events:none;
   }
   .hf-close-word{font-family:var(--font-kr);font-weight:900;font-size:130px;letter-spacing:-.05em;line-height:1;}
   .hf-close-sub{font-family:var(--font-en);font-size:24px;letter-spacing:.28em;opacity:.85;}
@@ -707,7 +707,7 @@
       </div>
 
       <div class="works-more fade-up">
-        <a href="works.html" class="btn btn-outline">더 많은 작업물이 궁금하다면?</a>
+        <a href="works.html" class="btn btn-outline">포트폴리오 전체보기</a>
       </div>
     </div>
   </section>
@@ -801,7 +801,7 @@
 
             <label class="consent">
               <input type="checkbox" required>
-              문의를 위해 남겨주신 개인정보는 답변 목적 외에는 사용되지 않으며, 상담 완료 후 안전하게 폐기됩니다. 내용에 동의합니다.
+              문의를 위해 남겨주신 개인정보는 답변 목적 외에는 사용되지 않으며, 상담 완료 후 안전하게 폐기됩니다. <a href="privacy.html" target="_blank" style="color:var(--orange);text-decoration:underline;">개인정보처리방침</a> 내용에 동의합니다.
             </label>
 
             <button type="submit" class="btn btn-primary">문의 보내기</button>
@@ -848,7 +848,7 @@
     <div class="footer-bottom">
       <div class="footer-info">
         <span>© 2026 MUNE STUDIO. All rights reserved.</span>
-        <span>MUNE STUDIO · munestudio.kr | 상호명: 뮨스튜디오(MUNE STUDIO) | 대표: 송진희 | 사업자등록번호: 486-01-03815</span>
+        <span>MUNE STUDIO · munestudio.kr | 상호명: 뮨스튜디오(MUNE STUDIO) | 대표: 송진희 | 사업자등록번호: 486-01-03815 | <a href="privacy.html" style="text-decoration:underline;">개인정보처리방침</a></span>
       </div>
       <div class="social">
         <a href="https://www.instagram.com/munestudio.design/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
@@ -1173,6 +1173,8 @@
     } catch (e) {
       console.warn('포트폴리오 데이터를 불러오지 못했습니다.', e);
     }
+    // 메인페이지에는 최신 작업물 6개만 노출 (전체 목록은 works.html에서 확인)
+    items = items.slice(-6).reverse();
     grid.innerHTML = items.map((item, i) => {
       const catKey = item.category || 'branding';
       const hasImage = !!(item.image && String(item.image).trim());
