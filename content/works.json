@@ -153,6 +153,28 @@
       ],
       "shortTitle": "다이어트 캔디",
       "productType": "이너뷰티 식품"
+    },
+    {
+      "title": "[식품] 샤인머스켓 상세페이지 디자인 / Shine Muscat Grape Design",
+      "slug": "shine-muscat",
+      "category": "detail",
+      "client": "",
+      "year": "2026",
+      "image": "images/works/shine-muscat-thumb.jpg",
+      "description": "경북 김천 산지 직송 샤인머스켓 상세페이지 디자인. 산지의 신뢰감과 신선함을 중심으로 풀어냈습니다.",
+      "gallery": [
+        "images/works/shine-muscat-1.jpg",
+        "images/works/shine-muscat-2.jpg",
+        "images/works/shine-muscat-3.jpg",
+        "images/works/shine-muscat-4.jpg",
+        "images/works/shine-muscat-5.jpg",
+        "images/works/shine-muscat-6.jpg",
+        "images/works/shine-muscat-7.jpg",
+        "images/works/shine-muscat-8.jpg",
+        "images/works/shine-muscat-9.jpg"
+      ],
+      "shortTitle": "산지 직송 샤인머스켓",
+      "productType": "식품"
     }
   ]
 }
