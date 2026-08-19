@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MUNE STUDIO | 브랜드를 위한 디자인 스튜디오</title>
 <meta name="description" content="MUNE STUDIO는 브랜딩, 상세페이지, 컨텐츠디자인, 로고디자인, 패키지 디자인을 아우르는 디자인 스튜디오입니다.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%226%22%20fill%3D%22%2316171a%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%226.5%22%20fill%3D%22%23ff5a28%22/%3E%3C/svg%3E">
 <link rel="canonical" href="https://munestudio.kr/">
 <meta property="og:title" content="MUNE STUDIO | 브랜드를 위한 디자인 스튜디오">
 <meta property="og:description" content="브랜딩, 상세페이지, 컨텐츠디자인, 로고디자인, 패키지 디자인을 아우르는 디자인 스튜디오 MUNE STUDIO입니다.">
@@ -91,6 +92,9 @@
     display:flex;align-items:center;gap:2px;
   }
   .logo span{color:var(--orange);}
+  .logo-moon{width:15px;height:15px;margin:0 1px;flex-shrink:0;color:var(--orange);}
+  .footer-logo{display:flex;align-items:center;gap:6px;}
+  .footer-logo .logo-moon{width:17px;height:17px;color:#fff;}
   .nav-links{display:flex;align-items:center;gap:40px;}
   .nav-links a{
     font-size:15px;font-weight:600;color:var(--gray-900);
@@ -133,6 +137,7 @@
   .hf-disc{
     position:absolute;border-radius:50%;background:var(--orange);z-index:0;
     will-change:transform,width,height,left,top;
+    box-shadow:0 0 70px 18px rgba(255,90,40,.32), 0 0 160px 46px rgba(255,90,40,.14);
   }
   .hf-block{position:absolute;z-index:1;}
   .hf-eyebrow{
@@ -243,7 +248,7 @@
     transition:all .2s var(--ease);
   }
   .filter-btn.active,.filter-btn:hover{background:var(--black);color:#fff;border-color:var(--black);}
-  .works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:52px 32px;}
+  .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 28px;}
   .work-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
   .work-card .work-thumb{
     position:relative;border-radius:var(--radius);overflow:hidden;background:var(--gray-100);
@@ -280,6 +285,7 @@
   .contact{background:var(--paper);}
   .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 30px 70px -30px rgba(0,0,0,.18);}
   .contact-visual{
+    position:relative;overflow:hidden;
     background:
       radial-gradient(circle at 30% 20%, rgba(240,78,35,.35), transparent 55%),
       linear-gradient(160deg,#1c1d20,#0f1011);
@@ -407,6 +413,7 @@
     .hero-accent .ha-core{inset:34px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .services-grid{grid-template-columns:repeat(2,1fr);}
+    .works-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .contact-visual{padding:44px 32px;}
     .contact-form{padding:44px 32px;}
@@ -445,7 +452,7 @@
 
 <header id="siteHeader">
   <div class="nav">
-    <a href="#top" class="logo">MUNE<span>.</span>STUDIO</a>
+    <a href="#top" class="logo">MUNE<svg class="logo-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>STUDIO</a>
     <nav class="nav-links">
       <a href="#about">소개</a>
       <a href="#services">서비스</a>
@@ -775,7 +782,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">MUNE.STUDIO</div>
+        <div class="footer-logo">MUNE<svg class="logo-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>STUDIO</div>
         <p class="footer-tag">브랜드의 진짜 이야기를 디자인으로 완성하는 디자인 스튜디오, MUNE STUDIO입니다.</p>
       </div>
       <div class="footer-cols">
