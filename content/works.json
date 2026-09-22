@@ -233,6 +233,30 @@
       ],
       "shortTitle": "유황 클렌저",
       "productType": "뷰티"
+    },
+    {
+      "title": "[식품] 수유시장 통 호두과자 상세페이지 디자인 / Walnut Pastry Design",
+      "slug": "walnut-pastry",
+      "category": "detail",
+      "client": "",
+      "year": "2026",
+      "image": "images/works/walnut-pastry-thumb.jpg",
+      "description": "수유시장에서 800만 개 판매를 기록한 통 호두과자 브랜드의 상세페이지 디자인입니다. 1등급 서울우유와 100% 우유버터 등 프리미엄 원재료를 강조해 신뢰도를 전달하고, 10가지 맛 라인업과 답례품·기업 단체주문까지 아우르는 용도별 패키지 구성을 한눈에 확인할 수 있도록 구성했습니다.",
+      "gallery": [
+        "images/works/walnut-pastry-1.jpg",
+        "images/works/walnut-pastry-2.jpg",
+        "images/works/walnut-pastry-3.jpg",
+        "images/works/walnut-pastry-4.jpg",
+        "images/works/walnut-pastry-5.jpg",
+        "images/works/walnut-pastry-6.jpg",
+        "images/works/walnut-pastry-7.jpg",
+        "images/works/walnut-pastry-8.jpg",
+        "images/works/walnut-pastry-9.jpg",
+        "images/works/walnut-pastry-10.jpg",
+        "images/works/walnut-pastry-11.jpg"
+      ],
+      "shortTitle": "수제 호두과자",
+      "productType": "식품"
     }
   ]
 }
