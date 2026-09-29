@@ -925,7 +925,8 @@
       const cardTitle = item.shortTitle || item.title || '';
       const workLabel = CAT_LABEL_KO[catKey] || catKey;
       const productType = item.productType || '';
-      return `<a class="work-card fade-up" data-cat="${escapeHtml(catKey)}" href="work-detail.html?id=${encodeURIComponent(slug)}">` +
+      const hideClass = catKey === 'detail' ? '' : ' hide';
+      return `<a class="work-card fade-up${hideClass}" data-cat="${escapeHtml(catKey)}" href="work-detail.html?id=${encodeURIComponent(slug)}">` +
         `<div class="${thumbClass}">${thumbInner}</div>` +
         `<div class="work-title">` +
           `<h3>${escapeHtml(cardTitle)}</h3>` +
@@ -949,7 +950,8 @@
         btn.classList.add('active');
         const f = btn.dataset.filter;
         document.querySelectorAll('#worksGrid .work-card').forEach(card => {
-          card.classList.toggle('hide', f !== 'all' && card.dataset.cat !== f);
+          const show = f === 'all' ? card.dataset.cat === 'detail' : card.dataset.cat === f;
+          card.classList.toggle('hide', !show);
         });
       });
     });

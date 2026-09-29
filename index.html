@@ -1215,8 +1215,8 @@
     } catch (e) {
       console.warn('포트폴리오 데이터를 불러오지 못했습니다.', e);
     }
-    // 메인페이지에는 최신 작업물 6개만 노출 (전체 목록은 works.html에서 확인)
-    items = items.slice(-6).reverse();
+    // 메인페이지에는 상세페이지 카테고리 중 최신 작업물 6개만 노출 (전체 목록은 works.html에서 확인)
+    items = items.filter((it) => (it.category || 'branding') === 'detail').slice(-6).reverse();
     grid.innerHTML = items.map((item, i) => {
       const catKey = item.category || 'branding';
       const hasImage = !!(item.image && String(item.image).trim());

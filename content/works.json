@@ -274,6 +274,29 @@
       ],
       "shortTitle": "프로폴리스 AI 연출컷",
       "productType": "건강기능식품"
+    },
+    {
+      "title": "[뷰티/화장품] SINSURU BHA 여드름 패치 상세페이지 디자인 / BHA Spot Patch Design",
+      "slug": "bha-spot-patch",
+      "category": "detail",
+      "client": "",
+      "year": "2026",
+      "image": "images/works/bha-spot-patch-thumb.jpg",
+      "description": "SINSURU BHA 아이코닉 스팟 패치의 글로벌 상세페이지 디자인입니다. 0.5% 살리실산(BHA)과 하이드로콜로이드 기술로 여드름 단계별 케어 효과를 신뢰감 있게 전달하면서도, 귀여운 캐릭터 스티커 디자인으로 데일리 케어와 스타일링을 동시에 즐길 수 있다는 점을 강조하는 데 집중했습니다.",
+      "gallery": [
+        "images/works/bha-spot-patch-1.jpg",
+        "images/works/bha-spot-patch-2.jpg",
+        "images/works/bha-spot-patch-3.jpg",
+        "images/works/bha-spot-patch-4.jpg",
+        "images/works/bha-spot-patch-5.jpg",
+        "images/works/bha-spot-patch-6.jpg",
+        "images/works/bha-spot-patch-7.jpg",
+        "images/works/bha-spot-patch-8.jpg",
+        "images/works/bha-spot-patch-9.jpg",
+        "images/works/bha-spot-patch-10.jpg"
+      ],
+      "shortTitle": "여드름 패치",
+      "productType": "뷰티/화장품"
     }
   ]
 }
