@@ -257,6 +257,24 @@
       ],
       "shortTitle": "수제 호두과자",
       "productType": "식품"
+    },
+    {
+      "title": "[건강기능식품] 유칼립투스 프로폴리스 AI 연출컷 디자인 / Eucalyptus Propolis AI Cut",
+      "slug": "propolis-ai-cut",
+      "category": "ai_cut",
+      "client": "",
+      "year": "2026",
+      "image": "images/works/propolis-aicut-thumb.jpg",
+      "description": "프리미엄 유칼립투스 프로폴리스 제품의 AI 연출컷입니다. 스튜디오 암석, 다크 스톤, 플랫레이 등 다양한 배경 톤으로 제품의 고급스러운 패키지 디자인을 강조하는 연출 이미지를 제작했습니다.",
+      "gallery": [
+        "images/works/propolis-aicut-1.jpg",
+        "images/works/propolis-aicut-2.jpg",
+        "images/works/propolis-aicut-3.jpg",
+        "images/works/propolis-aicut-4.jpg",
+        "images/works/propolis-aicut-5.jpg"
+      ],
+      "shortTitle": "프로폴리스 AI 연출컷",
+      "productType": "건강기능식품"
     }
   ]
 }
